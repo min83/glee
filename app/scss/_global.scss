@@ -1,0 +1,52 @@
+// html,
+// body{
+//    height: 100%;
+// }
+
+// .main{
+//    flex-grow: 1;
+// }
+
+// body {
+//    font-size: 16px;
+//    line-height: 26px;
+//    color: $default;
+//    @extend %quicksand-500;
+//    display: flex;
+//    flex-direction: column;
+// }
+
+.container,
+.big-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.big-container {
+   max-width: 1800px;
+}
+
+// a {
+//    font-size: 16px;
+//    line-height: 26px;
+//    color: $default;
+//    @extend %quicksand-500;
+// }
+
+// .title{
+//    text-align: center;
+//    font-size: 48px;
+//    line-height: 65px;
+//    text-transform: uppercase;
+//    color: $title;
+//    @extend %roboto-700;
+//    margin-bottom: 10px;
+   
+// }
+
+// .text{
+//    text-align: center;
+//    max-width: 570px;
+//    margin: 0 auto 55px;
+// }
