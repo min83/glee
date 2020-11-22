@@ -85,5 +85,116 @@
    }
 }
 
+.footer-top {
+   padding: 70px 0 65px;
+   border-bottom: 1px solid rgba(163, 187, 200, .4);
+   display: flex;
+   justify-content: space-between;
+   &__contact{
+      width: 200px;
+   }
+   &__item-nav{
+      width: 150px;
+   }
+   &__item-form{
+      max-width: 270px;
+   }
+   &__logo{
+      display: inline-block;
+      margin-bottom: 10px;
+   }
+   &__title{
+      font-size: 16px;
+      line-height: 47px;
+      text-transform: uppercase;
+      color: #1f2044;
+      @extend %dmsans-700;
+      margin-bottom: 7px;
+   }
+   &__address,
+   &__phone{
+      span{
+         text-transform: uppercase;
+      }
+   }
+   &__address,
+   &__phone,
+   &__email,
+   &__list-item {
+      margin-bottom: 5px;
+   }
+   &__address,
+   &__phone,
+   &__email,
+   &__link,
+   &__text{
+      font-size: 14px;
+      line-height: 24px;
+      color: #7b7b7b;
+      @extend %rubik-400;
+   }
+   &__text{
+      margin-bottom: 35px;
+   }
+   &__form-input{
+      max-width: 170px;
+      width: 100%;
+      background-color: rgba($accent, .2);
+      border: none;
+      padding: 4px 16px 4px 10px;
+      outline-color: $accent;
+      vertical-align: top;
+      &::placeholder{
+         font-size: 12px;
+         line-height: 10px;
+         color: #234969;
+         padding: 0;
+      }
+   }
+   &__form-btn{
+      border: none;
+      background-color: $bg;
+      font-size: 14px;
+      line-height: 18px;
+      color: #fff;
+      padding: 10px 14px;
+      cursor: pointer;
+      vertical-align: top;
+
+   }
+}
+
+.footer-bottom{
+   padding: 30px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   &__list{
+      display: flex; 
+   }
+   &__list-item{
+      padding: 0 15px;      
+      border-right: 1px solid #7b7b7b;
+      line-height: 18px;
+      &:last-child{
+         padding-right: 0;
+         border-right: none;
+      }     
+   }
+   &__list-link{
+      display: inline-block;
+      font-size: 14px;
+      line-height: 18px;
+      color: #7b7b7b;
+      @extend %rubik-400;
+   }
+   &__copy{
+      font-size: 14px;
+      line-height: 32px;
+      color: #7b7b7b;
+      @extend %rubik-400; 
+   }
+}
+
 
 @import 'media';
