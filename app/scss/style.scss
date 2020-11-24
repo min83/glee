@@ -241,7 +241,7 @@
          background-image: url("../images/slider/btn-arrow.svg");
          width: 22px;
          height: 9px;
-         top: 26px;
+         top: 23px;
          right: 18px;
          position: absolute;
       }      
@@ -265,6 +265,7 @@
             font-size: 11px;
             line-height: 8px;            
             color: rgba($default, .3);
+            outline-color: $accent;
             @extend %rubik-500;
          }         
       }
@@ -286,8 +287,8 @@
       width: 33.3333%;
    }
    &__text-box{
-      max-width: 290px;
-      padding-left: 70px;
+      max-width: 296px;
+      padding-left: 80px;
       margin: 0 auto;
       position: relative;
       &::before{
@@ -330,6 +331,20 @@
       color: #585858;
    }
 }
+
+
+
+.video{
+   // min-height: 500px;
+   padding: 200px 0;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   display: flex;
+   justify-content: center;
+   align-items: center;  
+}
+
 
 
 
