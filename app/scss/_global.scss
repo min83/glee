@@ -26,6 +26,14 @@ body {
    max-width: 1800px;
 }
 
+.title{   
+font-size: 36px;
+line-height: 44px;
+color: #1a1a1a;
+@extend %dmsans-700;
+text-align: center;
+}
+
 // a {
 //    font-size: 16px;
 //    line-height: 26px;

@@ -37,6 +37,16 @@ $default: #243f4d;
    font-weight: 400;
 }
 
+%filter-btn{
+   background-color: transparent;
+   padding: 0 5px;
+   border: none;
+   color: #8b8b8b;
+   @extend %dmsans-700;
+   outline-color: $bg;
+   transition: all .3s;
+}
+
 @function max($numbers...) {
    @return m#{a}x(#{$numbers});
 }
