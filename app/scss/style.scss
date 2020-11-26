@@ -99,7 +99,7 @@
    }
    &__item-form{
       max-width: 270px;
-   }
+   } 
    &__logo{
       display: inline-block;
       margin-bottom: 10px;
@@ -137,6 +137,9 @@
    &__text{
       margin-bottom: 35px;
    }
+   &__form{
+      display: flex;
+   }
    &__form-input{
       max-width: 170px;
       width: 100%;
@@ -144,7 +147,7 @@
       border: none;
       padding: 4px 16px 4px 10px;
       outline-color: $accent;
-      vertical-align: top;
+      // vertical-align: top;
       &::placeholder{
          font-size: 12px;
          line-height: 10px;
@@ -158,10 +161,9 @@
       font-size: 14px;
       line-height: 18px;
       color: #fff;
-      padding: 10px 14px;
+      padding: 10px 17px;
       cursor: pointer;
-      vertical-align: top;
-
+      // vertical-align: top;
    }
 }
 
@@ -222,7 +224,7 @@
    &__text{
       max-width: 365px;
       font-size: 18px;
-      color: #436372;
+      color: $dark;
       @extend %rubik-400;
       margin-bottom: 40px;
    }
@@ -241,8 +243,8 @@
          background-image: url("../images/slider/btn-arrow.svg");
          width: 22px;
          height: 9px;
-         top: 23px;
-         right: 18px;
+         top: 50%;
+         transform: translateY(-50%);        right: 18px;
          position: absolute;
       }      
    }
@@ -338,7 +340,7 @@
 }
 
 .product{
-   padding: 70px 0 180px;
+   padding-top: 70px;
    &__title{
       margin-bottom: 35px;
       color: #191919; 
@@ -356,33 +358,32 @@
    &__content{
       display:grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 40px 30px
+      grid-gap: 40px 30px;
+      margin-bottom: 180px;
    }
-   // .mixitup-control-active {
-   //    color:#1a1a1a;
-   // }
-   // 
-   // }
+   .mixitup-control-active {
+      color:#1a1a1a;
+   }
 }
-
 .product-item{
    max-width: 270px;
    box-shadow: 0px 6px 47px 3px rgba(36,36,36,0.05);
    border-radius: 10px;
    text-align: center;
+   display: flex;
+   flex-direction: column;
    padding-top: 25px;
    padding-bottom: 30px;
    &:hover{
       .product-item__link-box{
          transform: translateY(0);
-      }
+      }   
    }
    &__img-box{      
-      height: 200px;
+      // height: 200px;
       position: relative;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      margin-top: auto;
       margin-bottom: 50px;
    }
    &__link-box{
@@ -407,7 +408,6 @@
       width: 45px;
       height: 45px;
       border-radius: 50%;
-      box-shadow: 0px 6px 47px 3px rgba(36,36,36,0.05);
       transition: all .3s;
       path{
          transition: all .3s;
@@ -415,15 +415,14 @@
    }
    &__link:hover{
       background-color: $bg;
+      box-shadow: 0px 6px 47px 3px rgba(36,36,36,0.05);
       path{
          fill:#fff;
-      }
+      }      
    }
    &__image{
       margin: 0 auto;
-      object-fit: cover;
-     
-     margin-top: auto;
+      object-fit: cover;    
    }
    &__title{
       font-size: 16px;
@@ -437,6 +436,61 @@
       @extend %dmsans-700;
    }
 }
+
+.product-decor{
+   display: flex;
+   justify-content: space-between;
+   column-gap: 30px;
+   &__item{
+      width: 870px;
+      padding: 90px 0 85px;
+      background-color: rgba($accent, .4);
+      position: relative;
+   }
+   &__image{     
+      position: absolute;
+      top: -95px;
+      left: 140px;   
+   }
+   &__text-box{
+      max-width: 330px;
+      margin-left: 50%;
+      }
+   &__title{
+      font-size: 26px;
+      line-height: 32px;
+      color: $default;
+      @extend %dmsans-700;
+      margin-bottom: 15px;
+   }
+   &__text{
+      color: $default;
+      @extend %rubik-400;
+      margin-bottom: 20px;
+   }
+   &__link{
+      display: inline-block;
+      padding: 22px 84px 22px 20px;
+      text-transform: capitalize;
+      font-size: 15px;
+      line-height: 12px;
+      color: $dark;
+      @extend %rubik-500;
+      border: 1px solid rgba($dark, .4 );
+      border-radius: 5px;
+      position: relative;
+      &::after{
+         content: '';
+         background-image: url("../images/decor/right-arrow.svg");
+         width: 22px;
+         height: 9px;
+         top: 24px;
+         right: 20px;
+         position: absolute;
+      }         
+   }
+}
+
 
 .design{
    padding: 100px 0 120px;
@@ -481,8 +535,7 @@
    }
    &__item-text{
       color: $bg;
-   }
-   
+   }   
 }
 
 
@@ -496,7 +549,93 @@
    align-items: center;  
 }
 
-
+.blog{
+   padding-top: 120px;
+   &__title-inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 40px;
+   }
+   &__link {
+      line-height: 20px;
+      color: #262626;
+      text-transform: capitalize;
+      @extend %dmsans-700;
+      padding-right: 23px;
+      position: relative;
+      &::after{
+         content: '';
+         background-image: url("../images/blog/link-arrow.svg");
+         width: 7px;
+         height: 12px;
+         top: 50%;
+         transform: translateY(-50%);
+         right: 0;
+         position: absolute;
+      }
+   }
+   &__items{
+      display: flex;
+      justify-content: space-between;
+      column-gap: 30px;
+   }
+   &__item{
+      width: 370px;
+      background-color: #ffffff;
+      box-shadow: 0px 6px 47px 3px rgba(36,36,36,0.05);
+      border-radius: 5px;
+   }
+   &__item-imglink{
+      display: block;
+   }
+   &__item-image{
+      object-fit: cover;   
+   }
+   &__text-box{
+      padding: 30px 28px 20px;
+   }
+   &__item-title{
+      max-width: 285px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 24px;
+      color: #262626;
+      @extend %dmsans-500;
+   }
+   &__item-titlelink{
+      display: block;
+      font: inherit;
+      color: inherit;
+   }
+   &__info{
+      display: flex;
+      padding-top: 10px;
+      border-top: 1px solid #e0e0e0;
+      font-size: 12px;
+      color: #222933;
+      @extend %rubik-400;
+   }
+   &__info-date{
+      margin-right: 30px;
+   }
+   &__author-link{
+      display:block;
+      font: inherit;
+      color: inherit;
+   }
+}
+.partners{
+   padding: 265px 0 90px;
+   background-color: rgba($accent, .2);
+   margin-top: -171px;
+   &__items{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      column-gap: 30px;
+   }
+}
 
 
 @import 'media';
