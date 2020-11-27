@@ -594,6 +594,25 @@
    }
    &__text-box{
       padding: 30px 28px 20px;
+      position: relative;
+      &::before{
+         content: 'NEWS';
+         width: 103px;
+         height: 30px;
+         display: block;
+         background-color: $bg;
+         border-radius: 15px;
+         padding: 10px 30px;
+         font-size: 14px;
+         line-height: 12px;
+         color: #ffffff;
+         @extend %dmsans-700;
+         position: absolute;
+         top: -15px;
+         left:28px;
+         // top: 50%;
+         // transform: translateY(-340%);
+      }
    }
    &__item-title{
       max-width: 285px;
@@ -628,7 +647,7 @@
 .partners{
    padding: 265px 0 90px;
    background-color: rgba($accent, .2);
-   margin-top: -171px;
+   margin-top: -173px;
    &__items{
       display: flex;
       justify-content: space-around;
