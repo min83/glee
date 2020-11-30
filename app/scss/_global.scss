@@ -27,33 +27,44 @@ body {
 }
 
 .title{   
-font-size: 36px;
-line-height: 44px;
-color: #1a1a1a;
-@extend %dmsans-700;
-text-align: center;
+   font-size: 36px;
+   line-height: 44px;
+   color: #1a1a1a;
+   @extend %dmsans-700;
+   text-align: center;
 }
 
-// a {
-//    font-size: 16px;
-//    line-height: 26px;
-//    color: $default;
-//    @extend %quicksand-500;
-// }
+.breadcrumbs{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   &__list{
+      display: flex;
+   }
+   &__item{
+   padding-right: 20px;
+   font-size: 14px;
+   line-height: 24px;
+   color: rgba(#222933, .6);
+   @extend %rubik-400;
+   position: relative;
+      &::after{
+         content: ('/');
+         position: absolute;
+         top: 0;
+         right: 7px;
+      }
+      &:last-child{
+         padding-right: 0;
+         &::after{
+            display: none;
+         }
+      }
+   }   
+   &__link{
+      display: inline-block;
+      color: inherit;
+      font: inherit;      
+   }
+}
 
-// .title{
-//    text-align: center;
-//    font-size: 48px;
-//    line-height: 65px;
-//    text-transform: uppercase;
-//    color: $title;
-//    @extend %roboto-700;
-//    margin-bottom: 10px;
-   
-// }
-
-// .text{
-//    text-align: center;
-//    max-width: 570px;
-//    margin: 0 auto 55px;
-// }

@@ -199,6 +199,21 @@
    }
 }
 
+.top{
+   padding: 30px 0 35px;
+   text-align: center;
+   background-color: rgba($bg, .2);
+   &__title{
+   font-size: 36px;
+   line-height: 24px;
+   color: #222933; 
+   @extend %rubik-400;
+   margin-bottom: 12px;
+   // @extend %rubik-300; по макету 300 надо устанвить шрифт
+   }
+
+}
+
 .top-slider{
    &__inner{
       background-color: #fcd7b6;
@@ -380,7 +395,6 @@
       }   
    }
    &__img-box{      
-      // height: 200px;
       position: relative;
       overflow: hidden;
       margin-top: auto;
@@ -421,6 +435,7 @@
       }      
    }
    &__image{
+      // height: 208px;
       margin: 0 auto;
       object-fit: cover;    
    }
@@ -443,18 +458,18 @@
    column-gap: 30px;
    &__item{
       width: 870px;
-      padding: 90px 0 85px;
+      // width: 100%;
+      padding: 84px 0;
       background-color: rgba($accent, .4);
-      position: relative;
+      display: flex;
    }
-   &__image{     
-      position: absolute;
-      top: -95px;
-      left: 140px;   
+   &__image{
+      margin-left: 140px;
+      margin-top: -183px;
    }
    &__text-box{
       max-width: 330px;
-      margin-left: 50%;
+      padding: 0 5px 0 55px;
       }
    &__title{
       font-size: 26px;
@@ -466,7 +481,7 @@
    &__text{
       color: $default;
       @extend %rubik-400;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
    }
    &__link{
       display: inline-block;
@@ -490,7 +505,6 @@
       }         
    }
 }
-
 
 .design{
    padding: 100px 0 120px;
@@ -549,8 +563,43 @@
    align-items: center;  
 }
 
+.conditions{
+   padding-top: 120px;
+   &__title{
+      font-size: 24px;
+      line-height: 40px;
+      color: $default;
+      @extend %rubik-500;
+      margin-bottom: 25px;
+   } 
+   &__list{
+      list-style-type: decimal-leading-zero;
+      list-style-position: outside;
+      margin-bottom: 60px;
+   }
+   &__list-item{
+      color: $default;
+      @extend %rubik-400;
+      margin-bottom: 25px;
+      padding-left: 10px;
+      margin-left: 38px;
+      &:last-child{
+         margin-bottom: 0;
+      }
+   }
+   &__text{
+      color: $default;
+      @extend %rubik-400;
+      margin-bottom: 60px;
+      &:last-child{
+         margin-bottom: 0;
+      }
+   }    
+}
+
 .blog{
    padding-top: 120px;
+   background: linear-gradient(180deg, #fff 453px, rgba($accent, .2) 0%);
    &__title-inner{
       display: flex;
       justify-content: space-between;
@@ -590,16 +639,14 @@
       display: block;
    }
    &__item-image{
+      height: 250px;
       object-fit: cover;   
    }
    &__text-box{
-      padding: 30px 28px 20px;
+      padding: 28px 28px 19px;
       position: relative;
       &::before{
          content: 'NEWS';
-         width: 103px;
-         height: 30px;
-         display: block;
          background-color: $bg;
          border-radius: 15px;
          padding: 10px 30px;
@@ -609,7 +656,7 @@
          @extend %dmsans-700;
          position: absolute;
          top: -15px;
-         left:28px;
+         left: 28px;
          // top: 50%;
          // transform: translateY(-340%);
       }
@@ -637,17 +684,37 @@
    }
    &__info-date{
       margin-right: 30px;
+      position: relative;
+      &::before{
+         background-image: url('../images/icons/calendar.svg');
+      }
    }
    &__author-link{
       display:block;
       font: inherit;
       color: inherit;
+      &::before{
+         background-image: url('../images/icons/user.svg');
+      }
+   }
+   &__info-date,
+   &__author-link{
+      padding-left: 18px;
+      position: relative;
+       &::before{
+         content: ('');
+         width: 13px;
+         height: 14px;
+         top: 6px;
+         left: 0;
+         position: absolute;
+      }
    }
 }
+
 .partners{
-   padding: 265px 0 90px;
+   padding: 94px 0 89px;
    background-color: rgba($accent, .2);
-   margin-top: -173px;
    &__items{
       display: flex;
       justify-content: space-around;
@@ -655,6 +722,74 @@
       column-gap: 30px;
    }
 }
+
+.partners--login-page {
+   padding: 78px 0 89px;
+}
+
+.login{
+   padding: 120px 0;
+   max-width: 470px;
+   margin: 0 auto;
+   &__label{
+      display: block;
+      font-size: 14px;
+      color: $dark;
+      @extend %rubik-400;
+      margin-bottom: 25px;
+   }
+   &__input{
+      display: block;
+      width: 100%;
+      height: 60px;
+      border: 2px solid #f6f6f6;
+      padding: 0 15px;
+      margin-top: 5px;
+   }
+   &__btn{
+      display: block;
+      width: 100%;
+      background-color: $bg;
+      padding: 15px;
+      border: none;
+      margin-bottom: 25px;
+      font-size: 18px;
+      color: #fffefe;
+      @extend %rubik-500;
+      cursor: pointer;
+   }
+   &__label-inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #f6f6f6;
+   }
+   &__label-inner,
+   &__lost-link,
+   &__subtitle{      
+      font-size: 14px;
+      color: $dark;
+      @extend %rubik-400;
+   }
+    &__subtitle{
+       text-align: center;
+       margin-bottom: 15px;
+    }
+   &__link{
+      display: block;
+      width: 100%;
+      padding: 13px 10px;
+      border: 2px solid $bg;
+      color: $default;
+      text-align: center;
+      font-size: 18px;
+      @extend %rubik-500;
+   }
+}
+
+
 
 
 @import 'media';
