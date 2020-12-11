@@ -43,6 +43,16 @@ $dark: #436372;
    transition: all .3s;
 }
 
+%checkbox-hidden,
+%radio-hidden{
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   position: absolute;
+   clip: rect(0 0 0 0);
+}
+
+
 @function max($numbers...) {
    @return m#{a}x(#{$numbers});
 }

@@ -67,4 +67,29 @@ body {
       font: inherit;      
    }
 }
+.pagination{
+   display: flex;
+   justify-content: center;
+  &__list{
+     display: flex;
+  }
+  &__prev,
+  &__next,
+  &__item-link{
+     display: block;
+     @extend %rubik-400;
+     color: $default;
+     padding: 9px 18px;
+     border: 1px solid $bg;  
+  }
+  &__prev,
+  &__next,
+  &__item{
+      margin: 0 8px;
+  }
+  &__item-link--active{
+     color: #fff;
+     background-color: $bg;
+  }
+}
 
