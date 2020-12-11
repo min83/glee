@@ -1213,8 +1213,9 @@
       line-height: 15px;
       color:inherit;
    }
-   &__star-rating{
+   .jq-ry-container {
       margin-bottom: 5px;
+      padding: 0;
    }
    &__price{
       font-size: 15px;
