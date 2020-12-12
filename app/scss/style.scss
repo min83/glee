@@ -1258,10 +1258,7 @@
       width: 270px;
    }
    &__item{
-      margin-bottom: 50px;
-      &:last-child{
-         margin-bottom: 0;
-      }
+      margin-bottom: 50px;     
    }
    &__img-link{
       display: block;
@@ -1354,7 +1351,8 @@
       }
    }
    .pagination{
-    justify-content: flex-start;
+      justify-content: flex-start;
+      margin-top: 70px;
    }
 }
 
