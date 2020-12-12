@@ -1353,6 +1353,9 @@
          right: 20px;
       }
    }
+   .pagination{
+    justify-content: flex-start;
+   }
 }
 
 .recent-post{   
@@ -1396,13 +1399,8 @@
          background-image: url('../images/icons/calendar-grey.svg');
          top: 6px;
          left: 0;
-
       }
    }
-   // &__box{
-
-   // }
-
 }
 
 

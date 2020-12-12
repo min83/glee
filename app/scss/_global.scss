@@ -82,10 +82,15 @@ body {
      padding: 9px 18px;
      border: 1px solid $bg;  
   }
-  &__prev,
+  &__prev{
+      margin-right: 16px;
+  }  
   &__next,
   &__item{
-      margin: 0 8px;
+      margin-left: 16px;
+  }
+   &__item:first-child{
+     margin-left: 0;
   }
   &__item-link--active{
      color: #fff;
