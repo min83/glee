@@ -1,11 +1,47 @@
 $(function() {
+
+   $('.related-slide').slick({
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      infinite: false,
+
+      prevArrow: '<button type = "button" class= "slick-prev"><img src="images/icons/arrow-left.svg" alt="prev arrow"></button>',
+      
+      nextArrow: '<button type = "button" class= "slick-next"><img src="images/icons/arrow-right.svg" alt="next arrow"></button>',
+     
+   });
+
+   $('.product-tabs__top-item').on('click', function(e){
+      e.preventDefault();
+      $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+      $(this).addClass('product-tabs__top-item--active');
+
+      $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+      $($(this).attr('href')).addClass('product-tabs__content-item--active');
+   });
    
+   $('.product-slide__thumb').slick({
+      asNavFor: '.product-slide__big',
+      focusOnSelect: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      vertical: true,
+      draggable: false,
+      arrows: false    
+   });
+   $('.product-slide__big').slick({
+      asNavFor: '.product-slide__thumb',
+      draggable: false,
+      arrows: false,
+      fade: true
+   });
+
+   $('.product-one__num').styler()
 
    $('.filter-price__input').ionRangeSlider({
       type: "double", 
       // prefixs: "$",    
-      // step: "0.01",
-   
+      // step: "0.01",   
       onStart: function (data) {
          $('.filter-price__from').text(data.from);
          $('.filter-price__to').text(data.to);

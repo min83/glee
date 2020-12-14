@@ -425,6 +425,7 @@
       width: 45px;
       height: 45px;
       border-radius: 50%;
+      outline: none;
       transition: all .3s;
       path{
          transition: all .3s;
@@ -1049,13 +1050,8 @@
 //                height: 501px;
 //             }
 //          }
-         
+    
       
-   
-
-
-
-
 .filter{
    &__item{
       margin-bottom: 45px;
@@ -1401,10 +1397,240 @@
    }
 }
 
+.product-page{
+   padding: 120px 0 60px;
+}
 
+.product-one{
+   color:$default;
+   @extend %rubik-400;
+   &__inner{
+      display: flex;
+   }
+   &__slide{
+      width: 550px;
+      margin-right: 70px;
+   }
+   &__content {
+      width: 550px;
+   }
+   &__title{
+      font-size: 40px;
+      line-height: 26px;
+      color: #333333;
+      margin-bottom: 20px;
+   }
+   .jq-ry-container {
+      padding-left: 0;
+   }
+   &__star {
+      margin-bottom: 25px;
+   }
+   &__price{
+      font-size: 30px;
+      line-height: 45px;
+      color: #333333;
+   }
+   &__text{
+      margin-bottom: 30px;
+   }
+   &__btn{
+      text-transform: uppercase;
+      letter-spacing: 0.075em;
+      color: #ffffff;
+      background-color: $bg;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 46px;
+      cursor: pointer;
+      margin-left: 15px;
+   }
+}
 
+.jq-number__field {
+   width: 150px;
+   border: 1px solid $bg;
+   border-bottom-color:$bg;
+   border-radius: 0;
+   box-shadow: none;
+}
+.jq-number__field input {
+   width: 100%;
+   height: 53px;
+   border: none;
+   outline: none;
+   background: none;
+   padding: 0 1px;
+   font: 15px 'Rubik-Regular', sans-serif;
+   // line-height: 45px;
+   color: #333333;
+   text-transform: uppercase;
+   text-align: center; 
+}
+.jq-number{
+   padding: 0;
+   position: relative;
+}
+.jq-number__spin {
+   position: absolute;
+   width: 50px;
+   height: 100%;
+   top:0;
+   cursor: pointer;
+}
+.jq-number__spin.minus{  
+   left: 0;
+   border-right: 1px solid $bg;
+}
+.jq-number__spin.plus{  
+   right: 0;
+   border-left: 1px solid $bg;
+}
+.jq-number__spin::after {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translateY(-50%);
+   transform: translateX(-50%);
+   width: 10px;
+   height: 2px;
+   background-color: $default;    
+}
+.jq-number__spin.plus::before {
+   content: '';
+   position: absolute;
+   top: 43%;
+   left: 50%;  
+   transform: translateY(-50%);
+   transform: translateX(-50%);
+   width: 2px;
+   height: 10px;
+   background-color: $default;    
+}
 
+.one-info{
+   margin-top: 50px;
+   &__item-link{
+      display: inline-block;
+      font:inherit;
+      color: inherit;
+   }
+}   
 
+.product-slide{
+   // display:flex;
+   .slick-vertical .slick-slide{
+      height: 160px;
+      margin-bottom: 25px;
+   }
+   &__thumb{
+      width: 138px;
+      margin-right: 25px;
+      float: left;
+   }
+   &__thumb-item{
+      min-width: 138px;
+      height: 160px;
+      margin-bottom: 25px;
+      cursor: pointer;
+      img{
+         width: 138px;
+         height: 160px;
+         object-fit: cover;
+      }
+   }
+   &__big{
+      width: 387px;
+      float: left;
+      img{
+         width: 387px;
+         height: 530px;
+         object-fit: cover;
+      }      
+   }
+}
+
+.product-tabs{
+   padding-top: 100px;
+   &__top{
+      text-align: center;;
+      margin-bottom: 40px;
+      font-size: 18px;
+      line-height: 40px;
+      color: $default;
+      @extend %rubik-500;
+   }
+   &__top-item{
+      display: inline-block;
+      background-color: rgba($bg, .2);
+      border-radius: 5px;
+      min-width: 241px;
+      padding: 7px 10px; 
+      font: inherit;
+      color: inherit;
+      span{
+         display: inline-block;
+      }
+      & + .product-tabs__top-item{
+         margin-left: 8px;
+      }
+   }
+   &__top-item--active{
+      color:#fff;
+      background-color: $bg;
+   }
+   &__content-item{
+      display: none;
+      &.product-tabs__content-item--active{
+         display: block;
+      }
+   }
+}
+
+.related-products{
+   padding-top: 68px;
+   &__title{
+      text-align: initial;
+      margin-bottom: 65px;
+   }
+   &__slide{
+      margin-right: -30px;
+      margin-left: -30px;
+   }   
+}
+.related-slide{
+   &__item {
+      padding: 20px;
+      position: relative; 
+   }
+   .slick-prev,
+   .slick-next{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: 2px solid $bg;
+      border-radius: 5px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 5;
+      cursor: pointer;
+      outline: none;      
+   }
+   .slick-disabled{
+      border-color: rgba($bg, .2);
+   }
+   .slick-prev{
+       top: -100px;
+      right: 70px;
+   }
+   .slick-next{
+      top: -100px;
+      right: 0;
+   }
+}
 
 
 
