@@ -1072,8 +1072,6 @@
          margin-left: 15px;
          line-height: inherit;
          margin-bottom: 4px;
-         // vertical-align: middle;
-         // transform:translateY(-5px);
       }
    }
 }
@@ -1448,20 +1446,21 @@
             }
          }
       }
-      &__left-img{
-         float: left;
-         margin-right: 30px;
-         margin-bottom: 10px;
-      }
-      &__right-img{
-         float: right;
-         margin-left: 30px;
-         margin-bottom: 10px;
-      }
-      .clearfix{
-         clear: both;
-      }   
+   }  
+   &__left-img{
+      float: left;
+      margin-right: 30px;
+      margin-bottom: 10px;
    }
+   &__right-img{
+      float: right;
+      margin-left: 30px;
+      margin-bottom: 10px;
+   }
+   .clearfix{
+      clear: both;
+   }
+
    &__post-info{
       padding: 25px 0;
       border-top: 2px solid #ebebeb;
@@ -1661,7 +1660,6 @@
       }
    }
    &__form-btn{
-      // display: inline-block;
       font-size: 14px;
       line-height: 21px;
       @extend %rubik-400;
@@ -1916,4 +1914,4 @@
 
 
 
-   @import 'media';
+@import 'media';
