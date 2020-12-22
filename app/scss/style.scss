@@ -1573,28 +1573,44 @@
       line-height: 26px;
       color: #333333;
       @extend %rubik-400;
+      width: 210px;
    }
    &__tag{
+      display: flex;
+      margin-bottom: 10px;
       span{
-         display: inline-block;
          margin-right: 25px;
       }
    }
-   &__tag-link{
-      margin-left: 5px;
+   &__tag-list{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   &__tag-item {
+      margin-right: 5px;
+   }
+   &__tag-link{  
+      display: inline-block;    
       color: #999999;
       &:hover{
          color: $default;
       }      
    }
-   &__tag,
    &__share{
       display: flex;
+      // span{
+      //    margin-right: 25px;
+      // }
    }
-
+   &__share-list{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   &__share-item {
+      margin-left: 20px;
+    }
    &__share-link{
       display:inline-block;
-      margin-left: 20px;
       &:hover{
          path{
             fill: $default;
