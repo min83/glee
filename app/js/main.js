@@ -4,6 +4,12 @@ $(function() {
       $('.menu__list').toggleClass('menu__list--active');
    });
 
+   $('.footer-top__hidden-title').on('click', function(){
+      $(this).next().slideToggle();
+      $(this).toggleClass('active');
+   });
+
+
    // $('.user-nav__search-btn').on('click', function () {
    //    $('.user-nav__search-form').toggleClass('user-nav__search-form--active')     
    // });

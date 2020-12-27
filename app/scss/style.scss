@@ -245,7 +245,10 @@
       text-transform: uppercase;
       color: #1f2044;
       @extend %dmsans-700;
-      margin-bottom: 7px;
+      margin-bottom: 7px;      
+   }
+   &__hidden-title{
+      pointer-events: none;   
    }
    &__address,
    &__phone{
@@ -339,14 +342,12 @@
    text-align: center;
    background-color: rgba($bg, .2);
    &__title{
-   font-size: 36px;
-   line-height: 24px;
-   color: #222933; 
-   @extend %rubik-400;
-   margin-bottom: 12px;
-   // @extend %rubik-300; по макету 300 надо устанвить шрифт
+      font-size: 36px;
+      line-height: 24px;
+      color: #222933; 
+      @extend %rubik-400;
+      margin-bottom: 12px;
    }
-
 }
 
 .top-slider{
@@ -435,7 +436,7 @@
       display: flex;
    }
    &__item{
-      padding: 45px 0;
+      padding: 45px 10px;
       width: 33.3333%;
       background-color: rgba($accent, .2);
       border-right: 1px solid rgba($default, .1);
@@ -593,7 +594,6 @@
    column-gap: 30px;
    &__item{
       width: 870px;
-      // width: 100%;
       padding: 84px 0;
       background-color: rgba($accent, .4);
       display: flex;
@@ -604,7 +604,7 @@
    }
    &__text-box{
       max-width: 330px;
-      padding: 0 5px 0 55px;
+      padding: 0 10px 0 55px;
       }
    &__title{
       font-size: 26px;
@@ -669,7 +669,8 @@
    }
    &__item{
       min-height: 246px;
-      width: 370px;
+      max-width: 370px;
+      width: 100%;
       padding: 35px 5px 10px 35px;
       background-repeat: no-repeat;
       background-size: cover;
@@ -2198,7 +2199,7 @@
       display: block;
       max-width: 300px;
       width: 100%;
-      padding: 0 22px;
+      padding: 0 40px 0 20px;
       height: 50px;
       @extend %rubik-400;
       color: #565872;
@@ -2207,7 +2208,7 @@
       background-color: rgba(#f5f5f5, .5);
       border: none;      
       background-repeat: no-repeat;
-      background-position: top 50% right 22px;
+      background-position: top 50% right 18px;   
    }
    &__form-input--name{
       background-image: url(../images/icons/user-name.svg);  
@@ -2218,7 +2219,7 @@
    &__form-textarea{
       display: block;
       width: 100%;
-      padding: 15px 22px 0 22px;
+      padding: 15px 40px 0 20px;
       height: 175px;
       background-color: rgba(#f5f5f5, .5);
       text-transform: uppercase;
@@ -2228,7 +2229,7 @@
       color: #565872;
       background-image: url(../images/icons/comment-icon.svg);
       background-repeat: no-repeat;
-      background-position: top 15px right 22px;
+      background-position: top 15px right 18px;
       margin-bottom: 30px;
    }
    &__form-btn{
