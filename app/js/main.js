@@ -9,6 +9,10 @@ $(function() {
       $(this).toggleClass('active');
    });
 
+   $('.shop__filter-btn').on('click', function() {
+      $('.shop__filters').slideToggle();
+   })
+
 
    // $('.user-nav__search-btn').on('click', function () {
    //    $('.user-nav__search-form').toggleClass('user-nav__search-form--active')     
@@ -51,7 +55,15 @@ $(function() {
       asNavFor: '.product-slide__thumb',
       draggable: false,
       arrows: false,
-      fade: true
+      fade: true,
+      responsive: [
+         {
+            breakpoint: 950,
+            sttings: {
+               draggable: true,
+            }
+         },
+      ]
    });
 
    $('.product-one__num').styler()
