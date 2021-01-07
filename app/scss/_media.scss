@@ -427,6 +427,7 @@
          align-items: center;
       }
       &__slide{
+         width: 100%;
          margin-right: 0;
       }
       &__content{
@@ -983,8 +984,21 @@
          align-items: center;
       }
    }
+
    .product-page {
       padding: 0;
+   }
+
+   .product-slide{
+      &__big{
+         max-width: 387px;
+         width: 100%;
+         clear: left;
+         img{
+            max-width: 387px;
+            width: 100%;
+         }
+      }
    }
 
    .team{
