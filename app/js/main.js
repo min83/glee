@@ -24,7 +24,7 @@ $(function() {
 
    $('.related-slide').slick({
       slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToScroll: 1,
       infinite: false,
 
       prevArrow: '<button type = "button" class= "slick-prev"><img src="images/icons/arrow-left.svg" alt="prev arrow"></button>',
@@ -59,7 +59,7 @@ $(function() {
       responsive: [
          {
             breakpoint: 950,
-            sttings: {
+            settings: {
                draggable: true,
             }
          },
