@@ -1,0 +1,63 @@
+$accent: #fcd7b6;
+$bg: #a3bbc8;
+$default: #243f4d;
+$dark: #436372;
+
+%rubik-400{
+   font-family: 'Rubik-Regular', sans-serif;
+   font-weight: 400;
+}
+
+%rubik-500{
+   font-family: 'Rubik-Medium', sans-serif;
+   font-weight: 500;
+}
+
+%rubik-700{
+   font-family: 'Rubik-Bold', sans-serif;
+   font-weight: 700;
+}
+
+%dmsans-400{
+   font-family: 'DMSans-Regular', sans-serif;
+   font-weight: 400; 
+}
+
+%dmsans-500{
+   font-family: 'DMSans-Medium', sans-serif;
+   font-weight: 500; 
+}
+
+%dmsans-700{
+   font-family: 'DMSans-Bold', sans-serif;
+   font-weight: 700; 
+}
+
+%filter-btn{
+   background-color: transparent;
+   padding: 0 5px;
+   border: none;
+   color: #8b8b8b;
+   @extend %dmsans-700;
+   outline-color: $bg;
+   transition: all .3s;
+}
+
+%checkbox-hidden,
+%radio-hidden{
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   position: absolute;
+   clip: rect(0 0 0 0);
+}
+
+
+@function max($numbers...) {
+   @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+   @return m#{i}n(#{$numbers});
+}
+
+
